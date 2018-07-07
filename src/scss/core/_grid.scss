@@ -1,0 +1,63 @@
+$grid_column_count: 12;
+$grid_max_width: 1200px;
+$grid_column_gutter: 30px;
+$grid_breakpoints: (
+    small: 0,
+    medium: 48rem,
+    large: 64rem,
+    xlarge: 90rem,
+    xxlarge: 105rem
+);
+
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($grid_breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($grid_breakpoints, $breakpoint)}) {
+            @content;
+        }
+    } @else {
+        @media (min-width: #{$breakpoint}) {
+            @content;
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+.wrap {
+    display: block;
+    width: 100%;
+    max-width: $grid_max_width;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: $grid_column_gutter / 2;
+    padding-left: $grid_column_gutter / 2;
+}
+
+@each $name, $breakpoint in $grid_breakpoints {
+    @include breakpoint($breakpoint) {
+        @for $i from 1 through $grid_column_count {
+            .#{$name}-#{$i} {
+                flex-basis: 100% / ($grid_column_count / $i);
+                flex-shrink: 0;
+            }
+        }
+    }
+}
