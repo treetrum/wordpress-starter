@@ -11,7 +11,13 @@ function sjd_scripts() {
     // SCRIPTS
 
     // User scripts    
-    wp_enqueue_script( 'bundle', get_template_directory_uri() . '/dist/bundle.js?v=' . md5_file(get_template_directory() . '/dist/bundle.js'), [], null, true );
+    wp_enqueue_script(
+        'bundle',
+        get_template_directory_uri() . '/dist/bundle.js',
+        null,
+        md5_file(get_template_directory() . '/dist/bundle.js'),
+        true
+    );
 
     // Pass WordPress data into our JS
     $js_data = array(
@@ -23,7 +29,12 @@ function sjd_scripts() {
     wp_localize_script( 'bundle', 'siteData',  $js_data);
 
     // User styles
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/dist/main.css', null, md5_file(get_template_directory() . '/dist/main.css') );
+    wp_enqueue_style( 
+        'style', 
+        get_template_directory_uri() . '/dist/main.css', 
+        null, 
+        md5_file(get_template_directory() . '/dist/main.css') 
+    );
 
 }
 

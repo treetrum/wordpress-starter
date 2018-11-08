@@ -1,4 +1,4 @@
 module.exports = {
-    url: 'sjdco.test',
-    port: 3000
+	url: 'test-wordpress.test',
+	port: 3000
 };
