@@ -1,0 +1,23 @@
+{
+	"rules": {
+		"color-no-invalid-hex": true,
+		"declaration-block-no-duplicate-properties": true,
+		"declaration-block-no-shorthand-property-overrides": true,
+		"declaration-block-trailing-semicolon": "always",
+		"declaration-block-semicolon-newline-after": "always",
+		"declaration-colon-space-after": "always",
+		"declaration-colon-space-before": "never",
+		"function-linear-gradient-no-nonstandard-direction": true,
+		"function-url-quotes": "always",
+		"max-empty-lines": 1,
+		"no-descending-specificity": true,
+		"no-duplicate-selectors": true,
+		"no-eol-whitespace": true,
+		"number-leading-zero": "always",
+		"number-no-trailing-zeros": true,
+		"selector-max-id": 0,
+		"rule-empty-line-before": ["always", {
+			"ignore": ["inside-block"]
+		}]
+	}
+}

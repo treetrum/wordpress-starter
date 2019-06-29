@@ -1,3 +1,4 @@
-<?php get_header(); ?>
+<?php
+$context = Timber::get_context();
 
-<?php get_footer(); ?> 
+Timber::render( './templates/index.twig', $context );

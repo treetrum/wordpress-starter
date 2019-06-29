@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html {{function("language_attributes")}}>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <link rel="icon" href="{{theme.uri}}/dist/images/favicon.png">
+        {{function("wp_head")}}
+    </head>
+
+    <body {{function("body_class")}}> {% block content %}{% endblock %}
+
+        {{function("wp_footer")}}
+
+    </body>
+</html>
