@@ -21,7 +21,7 @@
     "anchor-scroll": "^2.0.0",
     "animejs": "^3.0.1",
     "intersection-observer": "^0.7.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "objectFitPolyfill": "^2.2.0"
   },
   "devDependencies": {
